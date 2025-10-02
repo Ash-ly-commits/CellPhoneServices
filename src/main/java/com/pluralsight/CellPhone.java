@@ -58,4 +58,9 @@ public class CellPhone {
     public void setSerialNumber(int serialNumber) {
         this.serialNumber = serialNumber;
     }
+
+    // Dials number and lets user know the details
+    public void dial(String number){
+        System.out.println(owner + "'s phone is calling " + number);
+    }
 }
