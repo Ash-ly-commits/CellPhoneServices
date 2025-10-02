@@ -1,12 +1,14 @@
 package com.pluralsight;
 
 public class CellPhone {
+    // Declared members
     private String model;
     private String carrier;
     private String owner;
     private String phoneNumber;
     private int serialNumber;
 
+    // Parameterless constructor initializing members
     public CellPhone() {
         model = " ";
         carrier = " ";
@@ -15,6 +17,7 @@ public class CellPhone {
         serialNumber = 0;
     }
 
+    // Getters (accessors)
     public String getModel() {
         return model;
     }
@@ -35,6 +38,7 @@ public class CellPhone {
         return serialNumber;
     }
 
+    // Setters (mutators)
     public void setModel(String model) {
         this.model = model;
     }

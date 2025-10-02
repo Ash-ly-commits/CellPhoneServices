@@ -3,9 +3,11 @@ import java.util.*;
 
 public class CellPhoneApplication {
     public static void main(String[] args) {
+        // Created CellPhone object and scanner
     CellPhone phone = new CellPhone();
     Scanner scanner = new Scanner(System.in);
 
+    // Prompting users for values to set members to and giving them back
     System.out.print("What is the serial number? ");
     phone.setSerialNumber(scanner.nextInt());
     System.out.println("Your serial number: " + phone.getSerialNumber());
