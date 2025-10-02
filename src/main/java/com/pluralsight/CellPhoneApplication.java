@@ -8,22 +8,27 @@ public class CellPhoneApplication {
         // Created CellPhone objects and set them up
     CellPhone phone1 = new CellPhone();
     CellPhone phone2 = new CellPhone();
+    CellPhone phone3 = new CellPhone(" "," "," "," ",0);
     setUp(phone1);
     setUp(phone2);
+    setUp(phone3);
 
     // Displaying object's members and dialing each other
     display(phone1);
     display(phone2);
+    display(phone3);
     phone1.dial(phone2.getPhoneNumber());
     phone2.dial(phone1.getPhoneNumber());
+    phone1.dial(phone3.getPhoneNumber());
+    phone2.dial(phone1);
     }
 
     // Prompting users for values to set members to
     public static void setUp(CellPhone p){
         System.out.print("What is the serial number? ");
         p.setSerialNumber(scanner.nextInt());
-        System.out.print("What model is the phone? ");
         scanner.nextLine();
+        System.out.print("What model is the phone? ");
         p.setModel(scanner.nextLine());
         System.out.print("Who is the carrier? ");
         p.setCarrier(scanner.nextLine());

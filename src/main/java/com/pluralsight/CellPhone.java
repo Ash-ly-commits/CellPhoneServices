@@ -17,23 +17,27 @@ public class CellPhone {
         serialNumber = 0;
     }
 
+    public CellPhone(String m, String c, String o, String p, int s) {
+        model = m;
+        carrier = c;
+        owner = o;
+        phoneNumber = p;
+        serialNumber = s;
+    }
+
     // Getters (accessors)
     public String getModel() {
         return model;
     }
-
     public String getCarrier() {
         return carrier;
     }
-
     public String getOwner() {
         return owner;
     }
-
     public String getPhoneNumber() {
         return phoneNumber;
     }
-
     public int getSerialNumber() {
         return serialNumber;
     }
@@ -42,19 +46,15 @@ public class CellPhone {
     public void setModel(String model) {
         this.model = model;
     }
-
     public void setCarrier(String carrier) {
         this.carrier = carrier;
     }
-
     public void setOwner(String owner) {
         this.owner = owner;
     }
-
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
-
     public void setSerialNumber(int serialNumber) {
         this.serialNumber = serialNumber;
     }
@@ -62,5 +62,8 @@ public class CellPhone {
     // Dials number and lets user know the details
     public void dial(String number){
         System.out.println(owner + "'s phone is calling " + number);
+    }
+    public void dial(CellPhone p){
+        System.out.println(p.getPhoneNumber());
     }
 }
